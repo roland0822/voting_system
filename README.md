@@ -1,48 +1,42 @@
-# OsztottProjekt
-Számítástechnika III. A. Elosztott szavazórendszer megvalósítása
+Voting System Readme
+This is a readme file for a voting system implemented using PHP, HTML, CSS, SQL, MongoDB, and Python. The system allows users to create questions, provide answers, and vote on answers. The data is stored in both SQL and MongoDB databases, providing flexibility and scalability. Additionally, a display module implemented in Python is included for visualizing the voting results.
 
-!!! Initial branchre töltsétek fel ami van eddig. Ha nem lehet akkor új saját branchre.
+Features
+User Registration and Authentication:
 
-Tanár dokumentuma: https://docs.google.com/document/d/1Kf0Xf_AVWoobFlTRmfs_ItwHYL4bzcz_BPQfZn9Pxjc/edit
+Users can register and create an account to participate in the voting system.
+User authentication is implemented to ensure secure access to the system.
+Question Creation:
 
-Adatbazis tablak: https://dbdiagram.io/d/6465bd4ddca9fb07c44d802c
- - Ezekkel a táblákkal dolgozunk, ha van javaslat javításra meghallgatom.
+Registered users can create questions by providing a title and description.
+Questions may include multiple-choice options or allow users to write their own answers.
+Answer Submission:
 
-A feladat struktúráját feltöltöttem a repoba, schema.png.
+Users can submit answers to the questions created by other users.
+Answers can be selected from predefined options or provided as a custom response.
+Voting Mechanism:
 
-!!! Feladatot a jobb átláthatóság miatt érdemes a project szekcióban és commit alkalmával dokumentálni.
+Users can vote for their preferred answers to contribute to the voting process.
+Each user has a single vote per question to ensure fairness.
+Data Storage:
 
-Display app-hoz python 3.9 ajánlott! pip install wxpython, pip install portalocker stb.
+The system stores data in both SQL and MongoDB databases to provide flexibility and support large-scale data management.
+SQL databases are used to store user information, questions, answers, and voting details.
+MongoDB is utilized to store additional data or provide advanced querying capabilities.
+Key-based Access:
 
-Adatbázinak MongoDB-t használunk. Szerver-t PHP-ban írjuk meg. Design HTML+CSS+JS.
+Users can access the system using a unique key associated with their account.
+This key ensures secure access and prevents unauthorized users from participating in the voting process.
+Display Module (Python):
 
-A ppt.t csatolom abba rakjátok be a saját részeteket, 2-3 slide.
+The system includes a display module implemented in Python for visualizing voting results.
+Python libraries, such as matplotlib or seaborn, can be used to generate graphs or charts based on the voting data stored in the databases.
+System Requirements
+To run the voting system, ensure that you have the following components installed:
 
-A feladat a szavazórendszer megvalósítása. 
- - Kliens regisztráció -> login
- - Kérdés/Szavazás kiküldése az érintett klienseknek
- - Válaszok fogadása a kliensektől
- - Válaszok kiértékelése és kivetítése
-A kérdés kiküldése után a képernyőn legyen látható a szavazás állapota(hányan szavaztak pl).
-Csak az szavazhat/válaszolhat aki be van jelentkezve és meg van jelölve az adott szavazásra.
-
-Az adatbázisban el lesz tárolva a szavazás kérdése, a válaszok és a kliensek adatai.
-
-(Code view-ben átláthatóbb)
-
-Név:          Feladat:                                            
-
-Kállai Balázs   12,13 - Lekérdezés kliensről, design                
-
-Magyar Roland   3,4 - Web RPC(adatbázis), szerver oldal             
-
-Iszlai Tamás    11,14 - Kliens, Bejelentkezés/Regisztráció          
-
-Bíró Apor       9,10 - Adatbázis                                    
-
-Lőrinczi Mátyás 7,8 - Kijelző alkalmazás                            
-
-Török Hunor     5,6 - Szerver oldal, Web RPC(kijelzőre)             
-
-Veres Tivadar   1,2 - Szerver alkalmazás                            
-
+PHP 7.0 or above
+HTML
+CSS
+SQL database (e.g., MySQL)
+MongoDB
+Python 3.x with required dependencies (matplotlib, seaborn, etc.)
